@@ -10,19 +10,15 @@ class CaptionModel:
         self.output_csv = output_csv
         self.progress_file = progress_file
 
-        # Carica il CSV di input
         self.df = pd.read_csv(self.input_csv)
 
-        # Carica il CSV di output esistente o crea un nuovo DataFrame
         if os.path.exists(self.output_csv):
             self.df_output = pd.read_csv(self.output_csv)
-            # Se il file esiste ma non ha la colonna 'status', la aggiunge
             if 'status' not in self.df_output.columns:
-                self.df_output['status'] = 'validated'  # Assume che i vecchi record siano validati
+                self.df_output['status'] = 'validated'  
         else:
             self.df_output = pd.DataFrame(columns=["image_name", "caption", "status"])
 
-        # Carica lo stato di avanzamento
         self.current_index, self.validated, self.skipped = self._load_progress()
 
     def _load_progress(self):

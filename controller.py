@@ -10,7 +10,7 @@ class CaptionController:
     def load_next(self):
         next_data = self.model.get_next()
         if next_data is None:
-            messagebox.showinfo("Fine", "Hai completato tutte le immagini!")
+            messagebox.showinfo("All done", "You have completed all the images!")
             self.view.root.quit()
             return
         filename, image_path, caption = next_data
@@ -19,22 +19,18 @@ class CaptionController:
         self.view.display_image_and_caption(image_path, caption, stats)
 
     def submit_caption(self, caption):
-        # Controlla se la caption è già presente (case insensitive)
         duplicate = (self.model.df_output['caption'].str.lower() == caption.lower()).any()
 
         if duplicate:
-            # Mostra finestra con scelta
             result = messagebox.askyesno(
-                "Attenzione",
-                "Questa caption è già presente. Vuoi salvarla lo stesso?\n\n"
-                "Premi 'Sì' per ignorare l'avviso e salvare.\n"
-                "Premi 'No' per tornare indietro e modificare."
+                "Warning",
+                "This caption already exists. Do you want to save it anyway?\n\n"
+                "Press 'Sì' to ignore the warning and save.\n"
+                "Press 'No' to go back and edit."
             )
             if not result:
-                # L'utente ha scelto di non salvare adesso, torna alla GUI senza avanzare
                 return
 
-        # Se qui, o non c'erano duplicati o utente ha deciso di ignorarli
         self.model.save_caption(self.current_filename, caption, skipped=False)
         self.load_next()
 

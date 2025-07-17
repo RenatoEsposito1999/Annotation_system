@@ -11,8 +11,8 @@ def main():
     model = CaptionModel(image_dir, input_csv, output_csv, progress_file)
 
     root = tk.Tk()
-    root.title("Annotation validation system")
-    root.geometry("700x800")  # 
+    root.title("AnnotaFlow")
+    root.geometry("700x800")
     view = CaptionView(root, lambda cap: controller.submit_caption(cap), lambda: controller.skip_caption())
     controller = CaptionController(model, view)
     root.mainloop()
