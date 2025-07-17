@@ -50,6 +50,7 @@ Edit the following variables in the `main()` function:
 
 ### Running the tool
 1. First of all, make sure you have a CSV file like this:
+
 |image_name    |caption              |
 
 |--------------|---------------------|
