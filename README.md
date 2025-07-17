@@ -42,7 +42,7 @@ pip install pandas pillow
 ```
 
 ### Configuration
-Edit the following variables in the 'main()' function:
+Edit the following variables in the `main()` function:
 - `image_dir`: folder containing images to annotate
 - `input_csv`: input CSV file with columns image_name and caption
 - `output_csv`: output CSV file path where validated captions will be saved
