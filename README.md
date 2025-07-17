@@ -51,13 +51,17 @@ Edit the following variables in the `main()` function:
 ### Running the tool
 1. First of all, make sure you have a CSV file like this:
 |image_name    |caption              |
+
 |--------------|---------------------|
+
 |img1.jpg      |A cat sleeping       |
+
 |img2.jpg      |Sunset over mountains|
+
 2. You can execute
-```bash
-python main.py
-```
+  ```bash
+  python main.py
+  ```
 
 ### Usage
  - The interface displays the image and its caption. 
