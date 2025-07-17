@@ -1,0 +1,88 @@
+# Standard Python ignores
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env/
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# VS Code specific
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains IDEs (PyCharm, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Testing/coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.tox/
+.nox/
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+*.csv   
+*.json      
+!progress.json  
+!config.json  
+
+# File temporanei
+*.tmp
+*.bak
+*.swp
+*~
