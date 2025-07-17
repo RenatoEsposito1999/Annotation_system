@@ -63,10 +63,10 @@ python main.py
  - Pressing Enter acts as a shortcut for submitting the caption.
 
 ### Code Structure
-`CaptionModel`: manages data loading, saving, and progress tracking.
-`CaptionView`: Tkinter GUI showing images, text input, and buttons.
-`CaptionController`: handles interaction between Model and View, controls app flow.
-`main.py`: application entry point that initializes MVC components and starts the GUI
+- `CaptionModel`: manages data loading, saving, and progress tracking.
+- `CaptionView`: Tkinter GUI showing images, text input, and buttons.
+- `CaptionController`: handles interaction between Model and View, controls app flow.
+- `main.py`: application entry point that initializes MVC components and starts the GUI
 
 ## License
 
